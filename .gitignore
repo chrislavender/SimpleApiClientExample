@@ -1,6 +1,12 @@
-# Xcode
+# Exclude temp nibs and swap files
+*~.nib
+*.swp
+ 
+# Exclude OS X folder attributes
 .DS_Store
-build/
+ 
+# Xcode
+build/*
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -14,5 +20,3 @@ build/
 xcuserdata
 profile
 *.moved-aside
-DerivedData
-.idea/
