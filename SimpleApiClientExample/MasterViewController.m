@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 
 #import "DetailViewController.h"
+#import "Movie+Create.h"
 
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -25,10 +26,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // setup the Facebook Session Info for this view controller (via category)    
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+                                                                                   target:self
+                                                                                   action:@selector(refreshMovies:)];
+    
+    self.navigationItem.rightBarButtonItem = refreshButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,8 +43,41 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender
+- (void)refreshMovies:(id)sender
 {
+    __weak MasterViewController *weakSelf = self;
+    
+    UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    [activityView startAnimating];
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:activityView];
+    
+    id buttonPlaceholder = self.navigationItem.rightBarButtonItem;
+    
+    self.navigationItem.rightBarButtonItem = item;
+    
+    [Movie getUpcomingMoviesInManagedObjectContext:self.fetchedResultsController.managedObjectContext
+                                         withBlock:^(NSArray *movieArray, NSError *error) {
+                                                                                          
+                                             [activityView stopAnimating];
+                                             weakSelf.navigationItem.rightBarButtonItem = buttonPlaceholder;
+                                             
+                                             if(error) {
+                                                 NSLog(@"Error:\n%@\n // [%@ %@]",
+                                                       error.localizedDescription,
+                                                       NSStringFromClass([self class]),
+                                                       NSStringFromSelector(_cmd));
+                                                 
+                                             } else {
+                                                 NSLog(@"Movies:%@ // [%@ %@]",
+                                                       movieArray,
+                                                       NSStringFromClass([self class]),
+                                                       NSStringFromSelector(_cmd));
+                                             }
+
+                                         }];
+
+    /*
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
@@ -55,6 +94,7 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+     */
 }
 
 #pragma mark - Table View
@@ -66,7 +106,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex: section];
     return [sectionInfo numberOfObjects];
 }
 
@@ -124,21 +164,24 @@
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Movie" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
     
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                                                managedObjectContext:self.managedObjectContext
+                                                                                                  sectionNameKeyPath:nil
+                                                                                                           cacheName:@"Upcoming"];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     
@@ -216,7 +259,7 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    cell.textLabel.text = [[object valueForKey:@"title"] description];
 }
 
 @end

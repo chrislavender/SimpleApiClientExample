@@ -5,15 +5,15 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Simple Api</string>
+	<string>ApiClient</string>
 	<key>CFBundleExecutable</key>
-	<string>Simple Api</string>
+	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleIdentifier</key>
 	<string>-UABYBBNWM.-.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Simple Api</string>
+	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -45,6 +45,19 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>CoreDataVersion</key>
+	<string>5</string>
+	<key>FacebookAppID</key>
+	<string>281684201954294</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb281684201954294</string>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>
