@@ -1,0 +1,3 @@
+[submodule "SimpleApiClientExample/ApiClient"]
+	path = SimpleApiClientExample/ApiClient
+	url = git@github.com:chrislavender/SimpleApiClient.git

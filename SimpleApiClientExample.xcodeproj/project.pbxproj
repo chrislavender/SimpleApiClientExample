@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		870D537D167AB93600E996E7 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 870D537C167AB93600E996E7 /* Movie.m */; };
+		870D5380167ABAD400E996E7 /* Movie+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 870D537F167ABAD400E996E7 /* Movie+Create.m */; };
+		870D5383167ABAEF00E996E7 /* ApiClient+Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 870D5382167ABAEF00E996E7 /* ApiClient+Movie.m */; };
+		870D5386167ACE2400E996E7 /* ApiClient+AuthParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 870D5385167ACE2400E996E7 /* ApiClient+AuthParams.m */; };
+		870D5388167AF7BC00E996E7 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870D5387167AF7BC00E996E7 /* SDWebImage.framework */; };
+		870D538A167AF7DF00E996E7 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870D5389167AF7DF00E996E7 /* ImageIO.framework */; };
+		870D538C167AF98400E996E7 /* steveo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 870D538B167AF98400E996E7 /* steveo.jpg */; };
+		879D944416785E4700773B05 /* ApiClient+Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 879D943D16785E4700773B05 /* ApiClient+Singleton.m */; };
+		879D944516785E4700773B05 /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 879D943F16785E4700773B05 /* ApiClient.m */; };
+		879D944616785E4700773B05 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 879D944116785E4700773B05 /* Reachability.m */; };
+		879D944916785EDA00773B05 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879D944816785EDA00773B05 /* SystemConfiguration.framework */; };
 		87D58F691678514C00A2900A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D58F681678514C00A2900A /* UIKit.framework */; };
 		87D58F6B1678514C00A2900A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D58F6A1678514C00A2900A /* Foundation.framework */; };
 		87D58F6D1678514C00A2900A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D58F6C1678514C00A2900A /* CoreGraphics.framework */; };
@@ -24,6 +35,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		870D537B167AB93600E996E7 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		870D537C167AB93600E996E7 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		870D537E167ABAD400E996E7 /* Movie+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Movie+Create.h"; sourceTree = "<group>"; };
+		870D537F167ABAD400E996E7 /* Movie+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Movie+Create.m"; sourceTree = "<group>"; };
+		870D5381167ABAEF00E996E7 /* ApiClient+Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ApiClient+Movie.h"; sourceTree = "<group>"; };
+		870D5382167ABAEF00E996E7 /* ApiClient+Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ApiClient+Movie.m"; sourceTree = "<group>"; };
+		870D5384167ACE2400E996E7 /* ApiClient+AuthParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ApiClient+AuthParams.h"; sourceTree = "<group>"; };
+		870D5385167ACE2400E996E7 /* ApiClient+AuthParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ApiClient+AuthParams.m"; sourceTree = "<group>"; };
+		870D5387167AF7BC00E996E7 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = SimpleApiClientExample/ThirdParty/SDWebImage.framework; sourceTree = "<group>"; };
+		870D5389167AF7DF00E996E7 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		870D538B167AF98400E996E7 /* steveo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = steveo.jpg; sourceTree = "<group>"; };
+		879D943C16785E4700773B05 /* ApiClient+Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ApiClient+Singleton.h"; sourceTree = "<group>"; };
+		879D943D16785E4700773B05 /* ApiClient+Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ApiClient+Singleton.m"; sourceTree = "<group>"; };
+		879D943E16785E4700773B05 /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
+		879D943F16785E4700773B05 /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
+		879D944016785E4700773B05 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		879D944116785E4700773B05 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		879D944816785EDA00773B05 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		87D58F641678514C00A2900A /* SimpleApiClientExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleApiClientExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D58F681678514C00A2900A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		87D58F6A1678514C00A2900A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,16 +80,70 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				870D538A167AF7DF00E996E7 /* ImageIO.framework in Frameworks */,
+				879D944916785EDA00773B05 /* SystemConfiguration.framework in Frameworks */,
 				87D58F691678514C00A2900A /* UIKit.framework in Frameworks */,
 				87D58F6B1678514C00A2900A /* Foundation.framework in Frameworks */,
 				87D58F6D1678514C00A2900A /* CoreGraphics.framework in Frameworks */,
 				87D58F6F1678514C00A2900A /* CoreData.framework in Frameworks */,
+				870D5388167AF7BC00E996E7 /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		870D536B167A9F8900E996E7 /* ApiClientCategories */ = {
+			isa = PBXGroup;
+			children = (
+				870D5381167ABAEF00E996E7 /* ApiClient+Movie.h */,
+				870D5382167ABAEF00E996E7 /* ApiClient+Movie.m */,
+			);
+			path = ApiClientCategories;
+			sourceTree = "<group>";
+		};
+		879D943A16785E4700773B05 /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				870D5384167ACE2400E996E7 /* ApiClient+AuthParams.h */,
+				870D5385167ACE2400E996E7 /* ApiClient+AuthParams.m */,
+				879D943C16785E4700773B05 /* ApiClient+Singleton.h */,
+				879D943D16785E4700773B05 /* ApiClient+Singleton.m */,
+				879D943E16785E4700773B05 /* ApiClient.h */,
+				879D943F16785E4700773B05 /* ApiClient.m */,
+				879D944016785E4700773B05 /* Reachability.h */,
+				879D944116785E4700773B05 /* Reachability.m */,
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		879D9456167862EC00773B05 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				870D536B167A9F8900E996E7 /* ApiClientCategories */,
+				879D9457167862EC00773B05 /* ModelCategories */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		879D9457167862EC00773B05 /* ModelCategories */ = {
+			isa = PBXGroup;
+			children = (
+				870D537E167ABAD400E996E7 /* Movie+Create.h */,
+				870D537F167ABAD400E996E7 /* Movie+Create.m */,
+			);
+			path = ModelCategories;
+			sourceTree = "<group>";
+		};
+		879D9459167862EC00773B05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				870D537B167AB93600E996E7 /* Movie.h */,
+				870D537C167AB93600E996E7 /* Movie.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		87D58F591678514C00A2900A = {
 			isa = PBXGroup;
 			children = (
@@ -81,10 +164,13 @@
 		87D58F671678514C00A2900A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				87D58F681678514C00A2900A /* UIKit.framework */,
-				87D58F6A1678514C00A2900A /* Foundation.framework */,
-				87D58F6C1678514C00A2900A /* CoreGraphics.framework */,
 				87D58F6E1678514C00A2900A /* CoreData.framework */,
+				87D58F6C1678514C00A2900A /* CoreGraphics.framework */,
+				87D58F6A1678514C00A2900A /* Foundation.framework */,
+				870D5389167AF7DF00E996E7 /* ImageIO.framework */,
+				870D5387167AF7BC00E996E7 /* SDWebImage.framework */,
+				879D944816785EDA00773B05 /* SystemConfiguration.framework */,
+				87D58F681678514C00A2900A /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -92,6 +178,9 @@
 		87D58F701678514C00A2900A /* SimpleApiClientExample */ = {
 			isa = PBXGroup;
 			children = (
+				879D9456167862EC00773B05 /* Categories */,
+				879D9459167862EC00773B05 /* Models */,
+				879D943A16785E4700773B05 /* ApiClient */,
 				87D58F791678514C00A2900A /* AppDelegate.h */,
 				87D58F7A1678514C00A2900A /* AppDelegate.m */,
 				87D58F821678514C00A2900A /* MainStoryboard.storyboard */,
@@ -108,13 +197,14 @@
 		87D58F711678514C00A2900A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				87D58F721678514C00A2900A /* SimpleApiClientExample-Info.plist */,
-				87D58F731678514C00A2900A /* InfoPlist.strings */,
-				87D58F761678514C00A2900A /* main.m */,
-				87D58F781678514C00A2900A /* SimpleApiClientExample-Prefix.pch */,
+				870D538B167AF98400E996E7 /* steveo.jpg */,
+				87D58F801678514C00A2900A /* Default-568h@2x.png */,
 				87D58F7C1678514C00A2900A /* Default.png */,
 				87D58F7E1678514C00A2900A /* Default@2x.png */,
-				87D58F801678514C00A2900A /* Default-568h@2x.png */,
+				87D58F731678514C00A2900A /* InfoPlist.strings */,
+				87D58F761678514C00A2900A /* main.m */,
+				87D58F721678514C00A2900A /* SimpleApiClientExample-Info.plist */,
+				87D58F781678514C00A2900A /* SimpleApiClientExample-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -175,6 +265,7 @@
 				87D58F7F1678514C00A2900A /* Default@2x.png in Resources */,
 				87D58F811678514C00A2900A /* Default-568h@2x.png in Resources */,
 				87D58F841678514C00A2900A /* MainStoryboard.storyboard in Resources */,
+				870D538C167AF98400E996E7 /* steveo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +281,13 @@
 				87D58F871678514C00A2900A /* SimpleApiClientExample.xcdatamodeld in Sources */,
 				87D58F8A1678514C00A2900A /* MasterViewController.m in Sources */,
 				87D58F8D1678514C00A2900A /* DetailViewController.m in Sources */,
+				879D944416785E4700773B05 /* ApiClient+Singleton.m in Sources */,
+				879D944516785E4700773B05 /* ApiClient.m in Sources */,
+				879D944616785E4700773B05 /* Reachability.m in Sources */,
+				870D537D167AB93600E996E7 /* Movie.m in Sources */,
+				870D5380167ABAD400E996E7 /* Movie+Create.m in Sources */,
+				870D5383167ABAEF00E996E7 /* ApiClient+Movie.m in Sources */,
+				870D5386167ACE2400E996E7 /* ApiClient+AuthParams.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,10 +371,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SimpleApiClientExample/ThirdParty\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleApiClientExample/SimpleApiClientExample-Prefix.pch";
 				INFOPLIST_FILE = "SimpleApiClientExample/SimpleApiClientExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -287,10 +391,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SimpleApiClientExample/ThirdParty\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleApiClientExample/SimpleApiClientExample-Prefix.pch";
 				INFOPLIST_FILE = "SimpleApiClientExample/SimpleApiClientExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -316,6 +426,7 @@
 				87D58F921678514C00A2900A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
